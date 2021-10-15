@@ -38,3 +38,18 @@ Constraints:
 1 <= |S| <= 106
 S = {0,1}
 */
+int lastIndex(string s) {
+    bool flag = false;
+    int n = s.length();
+    for (int i = n - 1; i >= 0; i--) {
+        if (s[i] == '1') {
+            flag = true;
+            return i;
+            break;
+        }
+    }
+
+    if (flag == false) {
+        return -1;
+    }
+}
